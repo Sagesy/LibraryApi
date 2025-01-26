@@ -166,9 +166,6 @@ namespace LibraryApi.Application.Service
 
         public string Update(ModifyOrderRequest paramData, LibraryContext context)
         {
-            //Validate dulu
-            //ValidateInput(paramData, context);
-
             var data = context.Orders.Where(x => x.OrderId == paramData.OrderId).FirstOrDefault();
             if (data is not null)
             {
